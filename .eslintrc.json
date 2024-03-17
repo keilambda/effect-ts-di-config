@@ -1,0 +1,137 @@
+{
+	"root": true,
+	"env": {
+		"node": true,
+		"jest": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": "tsconfig.json"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"import"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+	],
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [
+				".ts"
+			]
+		},
+		"import/resolver": {
+			"eslint-import-resolver-typescript": true
+		}
+	},
+	"ignorePatterns": [
+		".eslintrc.json"
+	],
+	"rules": {
+		"no-await-in-loop": "error",
+		"no-console": "warn",
+		"no-duplicate-imports": [
+			"warn",
+			{
+				"includeExports": true
+			}
+		],
+		"no-fallthrough": [
+			"warn",
+			{
+				"commentPattern": "fallthrough"
+			}
+		],
+		"no-implicit-coercion": "error",
+		"no-promise-executor-return": "error",
+		"no-self-compare": "error",
+		"no-unmodified-loop-condition": "warn",
+		"no-unreachable-loop": "error",
+		"no-unsafe-negation": [
+			"warn",
+			{
+				"enforceForOrderingRelations": true
+			}
+		],
+		"no-unsafe-optional-chaining": [
+			"warn",
+			{
+				"disallowArithmeticOperators": true
+			}
+		],
+		"require-atomic-updates": [
+			"error",
+			{
+				"allowProperties": true
+			}
+		],
+		"use-isnan": "error",
+		"valid-typeof": [
+			"error",
+			{
+				"requireStringLiterals": true
+			}
+		],
+		"curly": [
+			"error",
+			"all"
+		],
+		"eqeqeq": [
+			"error",
+			"always"
+		],
+		"quotes": [
+			"warn",
+			"double",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": false
+			}
+		],
+		"eol-last": "error",
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"semi": [
+			"warn",
+			"always"
+		],
+		"import/first": "error",
+		"import/order": [
+			"warn",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index",
+					"object",
+					"type"
+				],
+				"newlines-between": "always"
+			}
+		],
+		"import/newline-after-import": "error",
+		"import/no-duplicates": "error",
+		"@typescript-eslint/no-explicit-any": [
+			"warn",
+			{
+				"fixToUnknown": true
+			}
+		],
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^_"
+			}
+		]
+	}
+}
